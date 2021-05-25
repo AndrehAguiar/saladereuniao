@@ -42,7 +42,7 @@ export class RoomListComponent implements OnInit {
   updateRoom(id: number) {
     this.router.navigate(['update', id]);
   }
-  
+
   createRoom() {
     this.router.navigate(['add']);
   }
