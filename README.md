@@ -4,13 +4,13 @@
 
 Neste Labs foi desenvolvido uma API com Spring Boot para gerenciar nossas salas de reunião, utilizaremos o Spring Data para persistência de dados e o banco in-memory H2. E o Front End que irá consumir essa API será uma SPA escrita em Angular.
 
-![printList](D:\saladereuniao\img\printList.png)
+![printList](img\printList.png)
 
-![printNew](D:\saladereuniao\img\printNew.png)
+![printNew](img\printNew.png)
 
-![printEdit](D:\saladereuniao\img\printEdit.png)
+![printEdit](img\printEdit.png)
 
-![printDetails](D:\saladereuniao\img\printDetails.png)
+![printDetails](img\printDetails.png)
 
 ---
 
