@@ -1,6 +1,8 @@
+import { Room } from './room';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http'
+import { DatePipe } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +12,11 @@ export class RoomService {
   private baseUrl = 'http://localhost:8080/api/v1/room';
 
   constructor(private http: HttpClient) { }
+
+
+  formatDate(date : string) {
+    return new DatePipe('pt-BR').transform(date, 'dd/MM/yyyy') as string;
+  }
 
   getRoom(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);

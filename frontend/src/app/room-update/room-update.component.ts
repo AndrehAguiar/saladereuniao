@@ -2,6 +2,7 @@ import { RoomService } from './../room.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Room } from '../room';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-room-update',
@@ -28,6 +29,7 @@ export class RoomUpdateComponent implements OnInit {
   }
 
   updateRoom() {
+    this.room.date = this.roomService.formatDate(this.room.date);
     this.roomService.updateRoom(this.id, this.room)
       .subscribe(data => {
         console.log(data);

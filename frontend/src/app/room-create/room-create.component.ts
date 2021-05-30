@@ -24,6 +24,7 @@ export class RoomCreateComponent implements OnInit {
   }
 
   save() {
+    this.room.date = this.roomService.formatDate(this.room.date);
     this.roomService.createRoom(this.room)
       .subscribe(data => {
         console.log(data)
